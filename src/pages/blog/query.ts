@@ -5,7 +5,7 @@ const usePosts = () => {
   const data = useStaticQuery(graphql`
     query BlogPosts {
       posts: allMdx(
-        filter: { internal: { contentFilePath: { regex: "/posts/life/" } } }
+        filter: { internal: { contentFilePath: { regex: "/posts/" } } }
         sort: { frontmatter: { date: DESC } }
       ) {
         edges {

@@ -28,7 +28,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   }>(`
     query Posts {
       posts: allMdx(
-        filter: { internal: { contentFilePath: { regex: "/posts/life/" } } }
+        filter: { internal: { contentFilePath: { regex: "/posts/" } } }
         sort: { frontmatter: { date: DESC } }
       ) {
         nodes {

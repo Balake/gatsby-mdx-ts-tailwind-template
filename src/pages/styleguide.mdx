@@ -1,0 +1,549 @@
+# Styleguide
+
+This page demonstrates all supported Markdown and MDX elements.
+
+---
+
+## Headings
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+
+---
+
+## Paragraph
+
+This is a paragraph of text. It includes **bold**, _italic_, and ~~strikethrough~~ styles, as well as [a link](https://example.com).
+
+---
+
+## Blockquote
+
+> This is a blockquote.  
+> It can span multiple lines.
+
+---
+
+## Lists
+
+### Unordered List
+
+- Item one
+- Item two
+  - Nested item
+    - Deeply nested item
+- Item three
+
+### Ordered List
+
+1. First item
+2. Second item
+   1. Nested item
+   2. Another nested item
+3. Third item
+
+---
+
+## Code
+
+Inline code: `const foo = "bar"`
+
+### Code Block
+
+```js
+// JavaScript code block
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+```
+
+```tsx
+// TypeScript/React code block
+export function Button({ children }) {
+  return <button>{children}</button>;
+}
+```
+
+---
+
+## Horizontal Rule
+
+---
+
+## Table
+
+| Syntax | Description |
+| ------ | ----------- |
+| Header | Title       |
+| Cell   | Data        |
+
+---
+
+## Images
+
+![Alt text for image](https://placehold.co/600x200?text=Image+Example)
+
+---
+
+## Task List
+
+- [x] Task complete
+- [ ] Task incomplete
+
+---
+
+<Mermaid
+  chart={`flowchart TD
+    A[Chicken Coop] --> B[Nesting Boxes]
+    A --> C[Roosting Bars]
+    A --> D[Feeder]
+    A --> E[Waterer]
+    A --> F[Run]
+    F --> G[Outdoor Area]
+    F --> H[Chicken Door]
+`}
+/>
+
+---
+
+## HTML Elements
+
+<details>
+  <summary>Details/Summary Example</summary>
+  This is the content inside the details element.
+</details>
+
+<br />
+
+---
+
+## Callout Example (MDX Component)
+
+<Callout type="info" title="Info Callout">
+  This is an info callout using the custom Callout component.
+</Callout>
+
+<Callout type="tip" title="Tip Callout">
+  This is a tip callout using the custom Callout component.
+</Callout>
+
+<Callout type="warning" title="Warning Callout">
+  This is a warning callout using the custom Callout component.
+</Callout>
+
+<Callout type="error" title="Error Callout">
+  This is an error callout using the custom Callout component.
+</Callout>
+
+---
+
+## Emphasis
+
+_Emphasis_  
+**Strong**  
+**_Strong and Emphasis_**  
+**Strong**  
+~~Strikethrough~~
+
+---
+
+## Footnote
+
+Here is a footnote reference.[^1]
+
+[^1]: This is the footnote.
+
+---
+
+## Emoji
+
+🎉 👍 🚀
+
+---
+
+## Math (if supported)
+
+$$
+E = mc^2
+$$
+
+---
+
+## Color Swatches
+
+<table>
+  <thead>
+    <tr>
+      <th align="left">Swatch</th>
+      <th align="left">Variable</th>
+      <th align="left">Value</th>
+    </tr>
+  </thead>
+  <tbody className="color-swatch-table">
+    <tr>
+      <td>
+        <span className="color-swatch bg-background" />
+      </td>
+      <td>
+        <code>--background</code>
+      </td>
+      <td>
+        <code>#1a1d23</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-foreground" />
+      </td>
+      <td>
+        <code>--foreground</code>
+      </td>
+      <td>
+        <code>#e5e5e5</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-card" />
+      </td>
+      <td>
+        <code>--card</code>
+      </td>
+      <td>
+        <code>#2f3436</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-card-foreground" />
+      </td>
+      <td>
+        <code>--card-foreground</code>
+      </td>
+      <td>
+        <code>#e5e5e5</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-popover" />
+      </td>
+      <td>
+        <code>--popover</code>
+      </td>
+      <td>
+        <code>#2f3436</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-popover-foreground" />
+      </td>
+      <td>
+        <code>--popover-foreground</code>
+      </td>
+      <td>
+        <code>#e5e5e5</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-primary" />
+      </td>
+      <td>
+        <code>--primary</code>
+      </td>
+      <td>
+        <code>#ff99cc</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-primary-foreground" />
+      </td>
+      <td>
+        <code>--primary-foreground</code>
+      </td>
+      <td>
+        <code>#000000</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-secondary" />
+      </td>
+      <td>
+        <code>--secondary</code>
+      </td>
+      <td>
+        <code>#33cc33</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-secondary-foreground" />
+      </td>
+      <td>
+        <code>--secondary-foreground</code>
+      </td>
+      <td>
+        <code>#000000</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-muted" />
+      </td>
+      <td>
+        <code>--muted</code>
+      </td>
+      <td>
+        <code>#444444</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-muted-foreground" />
+      </td>
+      <td>
+        <code>--muted-foreground</code>
+      </td>
+      <td>
+        <code>#a3a3a3</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-accent" />
+      </td>
+      <td>
+        <code>--accent</code>
+      </td>
+      <td>
+        <code>#87ceeb</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-accent-foreground" />
+      </td>
+      <td>
+        <code>--accent-foreground</code>
+      </td>
+      <td>
+        <code>#000000</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-destructive" />
+      </td>
+      <td>
+        <code>--destructive</code>
+      </td>
+      <td>
+        <code>#ef4444</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-destructive-foreground" />
+      </td>
+      <td>
+        <code>--destructive-foreground</code>
+      </td>
+      <td>
+        <code>#ffffff</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-border" />
+      </td>
+      <td>
+        <code>--border</code>
+      </td>
+      <td>
+        <code>#444444</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-input" />
+      </td>
+      <td>
+        <code>--input</code>
+      </td>
+      <td>
+        <code>#444444</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-ring" />
+      </td>
+      <td>
+        <code>--ring</code>
+      </td>
+      <td>
+        <code>#ff99cc</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-chart-1" />
+      </td>
+      <td>
+        <code>--chart-1</code>
+      </td>
+      <td>
+        <code>#ff99cc</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-chart-2" />
+      </td>
+      <td>
+        <code>--chart-2</code>
+      </td>
+      <td>
+        <code>#33cc33</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-chart-3" />
+      </td>
+      <td>
+        <code>--chart-3</code>
+      </td>
+      <td>
+        <code>#87ceeb</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-chart-4" />
+      </td>
+      <td>
+        <code>--chart-4</code>
+      </td>
+      <td>
+        <code>#ffff00</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-chart-5" />
+      </td>
+      <td>
+        <code>--chart-5</code>
+      </td>
+      <td>
+        <code>#ffcc00</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-sidebar" />
+      </td>
+      <td>
+        <code>--sidebar</code>
+      </td>
+      <td>
+        <code>#1a1d23</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-sidebar-foreground" />
+      </td>
+      <td>
+        <code>--sidebar-foreground</code>
+      </td>
+      <td>
+        <code>#e5e5e5</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-sidebar-primary" />
+      </td>
+      <td>
+        <code>--sidebar-primary</code>
+      </td>
+      <td>
+        <code>#ff99cc</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-sidebar-primary-foreground" />
+      </td>
+      <td>
+        <code>--sidebar-primary-foreground</code>
+      </td>
+      <td>
+        <code>#000000</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-sidebar-accent" />
+      </td>
+      <td>
+        <code>--sidebar-accent</code>
+      </td>
+      <td>
+        <code>#87ceeb</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-sidebar-accent-foreground" />
+      </td>
+      <td>
+        <code>--sidebar-accent-foreground</code>
+      </td>
+      <td>
+        <code>#000000</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-sidebar-border" />
+      </td>
+      <td>
+        <code>--sidebar-border</code>
+      </td>
+      <td>
+        <code>#444444</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span className="color-swatch bg-sidebar-ring" />
+      </td>
+      <td>
+        <code>--sidebar-ring</code>
+      </td>
+      <td>
+        <code>#ff99cc</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+End of styleguide.

@@ -19,6 +19,7 @@ Use whatever node package manager you like, but I used `yarn`.
 - tailwind support
 - auto populating blog posts page
 - auto slugs based on filename (not that smart, use with caution)
+- code syntax highlighting with prismjs
 
 ## Styling
 
